@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Form</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:white;
+width:400px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+button{
+background:#4CAF50;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Information</h2>
+
+<form method="POST">
+
+<input type="text" name="name" placeholder="Enter Name" required>
+
+<input type="text" name="sap" placeholder="Enter SAP ID" required>
+
+<input type="number" name="age" placeholder="Enter Age" required>
+
+<input type="number" name="marks" placeholder="Enter Marks" required>
+
+<button type="submit">Submit</button>
+
+</form>
+
+{% if name %}
+
+<h3>Entered Data</h3>
+
+<p><b>Name:</b> {{name}}</p>
+<p><b>SAP ID:</b> {{sap}}</p>
+<p><b>Age:</b> {{age}}</p>
+<p><b>Marks:</b> {{marks}}</p>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
