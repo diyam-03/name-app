@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>{{player[1]}} Auction</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>{{player[1]}}</h1>
+
+<a href="/dashboard" class="back">⬅ Back</a>
+
+</header>
+
+<div class="player-container">
+
+<div class="stats">
+
+<p><strong>Country:</strong> {{player[2]}}</p>
+
+<p><strong>Role:</strong> {{player[3]}}</p>
+
+<p><strong>Runs:</strong> {{player[4]}}</p>
+
+<p><strong>Wickets:</strong> {{player[5]}}</p>
+
+</div>
+
+<h2 class="price">Current Price ₹ {{player[7]}}</h2>
+
+<form id="bidForm">
+
+<label>Select Team</label>
+
+<select id="team">
+
+{% for t in teams %}
+
+<option value="{{t[1]}}">
+{{t[1]}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Enter Bid</label>
+
+<input id="bid" placeholder="Enter new bid price">
+
+<button type="submit">Place Bid</button>
+
+</form>
+
+<p id="msg"></p>
+
+</div>
+
+<script src="/static/js/auction.js"></script>
+
+</body>
+
+</html>
